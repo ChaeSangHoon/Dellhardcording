@@ -1,0 +1,210 @@
+body,html{
+  font-size:10px;
+/*1rem = 10px
+ *2rem = 20px*/
+}
+*{
+  margin:0px; padding:0px;
+  /* font-family: 'Noto Sans KR', sans-serif; */
+  font-family: 'Nanum Gothic', sans-serif;
+  /* font-family: 'Black Han Sans', sans-serif;'' */
+  font-size:100%;
+  line-height:180%;
+  color:#222;
+  font-weight:400;
+}
+
+a{
+  text-decoration:none;
+  color:#f5f5f7;
+}
+img{
+  border:0;
+}
+ul,li{
+  list-style:none;
+}
+p{
+  font-family: 'Nanum Gothic', sans-serif;
+  color:#090909;
+}
+/*공통클래스*/
+
+.container{
+  max-width:1280px;
+  margin:0 auto;
+}
+.gnb_svg{
+  fill:#f5f5f7;
+}
+/* ------------------------------------- */
+
+#hd{
+    position:fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+    display:block;
+    width:100%; height:44px;
+    background: rgba(0,0,0,0.92);
+    float:left;
+    margin-bottom:44px;
+}
+#gnb{
+  width: 100%; height: 100%;
+  text-align:center;
+}
+#gnb li{
+  display:inline-block;
+  vertical-align: middle;
+}
+#gnb li a{
+  font-size: 1.4rem;
+  padding: 0 40px;
+  line-height: 100%;
+  display: block;
+}
+
+#scroll_top{
+  position:fixed;
+  top:44px;
+  background:red;
+  width:100%;
+  z-index:9999;
+}
+#scroll_top li{
+  float: left;
+  display:inline-block;
+  vertical-align: middle;
+}
+
+#visual{
+  width:100%;
+  position:relative;
+  top:0; left:0; right:0;
+  /* background:rgba(0,0,0,.96 ); */
+}
+
+/* condepen */
+body {
+  background: rgba(0, 0, 0, 0) radial-gradient(circle, #fff 20%, #999) repeat scroll 0 0;
+}
+
+.XPS {
+  padding: 4% 6%;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.screen {
+  background: #000;
+  border-radius: 3% 3% 0.5% 0.5% / 5%;
+  margin: 0 auto;
+  /* for aspect ratio */
+  position: relative;
+  width: 80%;
+}
+
+.screen:before {
+  border: 2px solid #cacacc;
+  border-radius: 3% 3% 0.5% 0.5% / 5%;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.8) inset, 0 0 1px 2px rgba(255, 255, 255, 0.3) inset;
+  content: "";
+  display: block;
+  /* for aspect ratio ~67:100 */
+  padding-top: 67%;
+}
+
+.screen:after {
+  content: "";
+  border-top: 2px solid rgba(255, 255, 255, 0.15);
+  position: absolute;
+  bottom: 0.75%;
+  left: 0.5%;
+  padding-top: 1%;
+  width: 99%;
+}
+
+.viewport {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 4.3% 3.2%;
+  background: #333;
+}
+
+.base {
+  /* for aspect ratio */
+  position: relative;
+  width: 100%;
+}
+
+.base:before {
+  content: "";
+  display: block;
+  /* for aspect ratio ~33:1000*/
+  padding-top: 3.3%;
+  /* stylin */
+  background: linear-gradient(#eaeced, #edeef0 55%, #fff 55%, #8a8b8f 56%, #999ba0 61%, #4B4B4F 84%, #262627 89%, rgba(0, 0, 0, .01) 98%);
+  border-radius: 0 0 10% 10%/ 0 0 50% 50%;
+}
+
+.base::after {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.8) 0.5%, rgba(0, 0, 0, 0.4) 3.3%, transparent 15%, rgba(255, 255, 255, 0.8) 50%, transparent 85%, rgba(0, 0, 0, 0.4) 96.7%, rgba(255, 255, 255, 0.8) 99.5%, rgba(0, 0, 0, 0.5) 100%);
+  content: "";
+  height: 53%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.notch {
+  background: #ddd;
+  border-radius: 0 0 7% 7% / 0 0 95% 95%;
+  box-shadow: -5px -1px 3px rgba(0, 0, 0, 0.2) inset, 5px -1px 3px rgba(0, 0, 0, 0.2) inset;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -3.5%;
+  z-index: 2;
+  /* for aspect ratio */
+  position: relative;
+  width: 14%;
+}
+
+.notch:before {
+  content: "";
+  display: block;
+  /* for aspect ratio ~1:10 */
+  padding-top: 10%;
+}
+
+
+/* Screenshot Hover Scroll Additions
+-------------------------------------------------------------- */
+
+.XPS .viewport {
+  transition: background-position 3.5s ease;
+  background-position: 0 0;
+  background-size: 100% auto;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.XPS:hover .viewport {
+  background-position: 0 100%;
+}
+
+
+
+
+
+/* #hd #gnb >ul >li + li a{
+  color:red;
+  밑과 같은 의미다
+} */
+/* #hd #gnb >ul >li:not(:first-child) a{
+  color:red;
+} */

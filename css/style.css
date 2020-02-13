@@ -100,7 +100,7 @@ p{
 }
 #scroll_top li+li{
   float: right;
-}
+} 
 
 #visual{
   width:100%;
@@ -131,11 +131,34 @@ p{
   color:#fff;
   padding: 5px 0;
 }
-#visual h2+h2{
+#visual .border_bottom{
   font-size:4rem;
   color:#fff;
   padding: 5px 0;
-  transition:1s;
+
+
+}
+h2.border_bottom:after{
+  content:"";
+  display: block;
+  width:60px;
+  border-bottom:solid 1px #fff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-137px);
+  animation-name:liner;
+  animation-duration:1.5s;
+}
+@@keyframes liner {
+  0%{
+    width:0%;
+  }
+  50%{
+    width:50%;
+  }
+  100%{
+    width:100%;
+  }
 }
 #visual span{
   color:#fff;
@@ -143,7 +166,22 @@ p{
   display: block;
   margin:5px 0;
 }
+#video_part{
+  width:100%;
+  background-color:#000;
+}
 
+#video_frame .youtube {
+  position: relative;
+  width: 560px;
+  height:315px;
+  padding-bottom: 56.25%;
+}
+#video_frame .youtube iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
 
 
 
@@ -160,8 +198,30 @@ p{
   margin:0 auto;
   position: relative;
 }
-#side_wrap .aside_wrap{
+#side_wrap #sp_txt p{
+  font-size:4rem;
+  color:#fff;
+  padding:15px 0;
+}
+#side_wrap #sp_txt p+p{
+  font-size:2rem;
+  color:#fff;
+  margin:-5px 0;
+}
+#side_wrap #sp_txt h2{
+  font-size:1.4rem;
+  color:#fff
+}
 
+#side_wrap #sp_txt a{
+  display: inline-block;
+  width:60px;
+  background:#fff;
+  color:#000;
+  text-align: center;
+  line-height:30px;
+  border-radius:3px;
+  text-decoration:none;
 }
 #side_wrap .container .f_container {
   width:505px;
@@ -176,6 +236,7 @@ p{
 #side_wrap .container .f_container figure {
   position:absolute;
   right:0;
+  top:50%;
   height:auto;
   transform:translateY(-50%);
   -webkit-transform:translateY(-50%);
